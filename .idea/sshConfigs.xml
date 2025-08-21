@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="45.15.23.59" id="0ba672ff-092f-44f4-8c9b-f62148f30ca3" port="22" customName="CursSymfony" nameFormat="CUSTOM" username="root" useOpenSSHConfig="true">
+        <option name="customName" value="CursSymfony" />
+      </sshConfig>
+    </configs>
+  </component>
+</project>

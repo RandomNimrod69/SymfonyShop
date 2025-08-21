@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="3cd5207f-a488-400e-8ea5-b56ed8a0e839" name="CursSymfony" url="http://45.15.23.59/Radu/SymfonyShop">
+        <fileTransfer rootFolder="/var/www/html/Radu/SymfonyShop" accessType="SFTP" host="45.15.23.59" port="22" sshConfigId="0ba672ff-092f-44f4-8c9b-f62148f30ca3" sshConfig="CursSymfony">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
