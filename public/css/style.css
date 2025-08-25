@@ -1,0 +1,411 @@
+.navbar, .dropdown, .btn {
+    all: unset;
+}
+
+.container {
+    min-width: 100%;
+    background-color: #100c34;
+    height: 98px;
+    width: 100%;
+    padding: 0;
+}
+
+.header {
+    width: 80%;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    margin: 0 auto;
+}
+
+.usertools {
+    margin-left: auto;
+}
+
+.navbar {
+    width: 80%;
+    margin: auto 0;
+    cursor: pointer;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    background-color: #e41d34;
+    color: white;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    gap: 25px;
+    z-index: 1;
+    padding: 0;
+}
+
+.nav-item-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.nav-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.nav-item i {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.nav-item span {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.nav-item:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    position: relative;
+}
+
+.search-container input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 10px 0 10px 0;
+    height: 45px;
+}
+
+.search-container i {
+    font-size: 18px;
+    margin-left: -30px;
+    cursor: pointer;
+    color: #888;
+}
+
+.container-HeaderProdus .row {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.container-HeaderProdus .col-1 {
+    width: auto;
+}
+
+.imagine-produs {
+    width: 34%;
+    display: flex;
+    justify-content: center;
+}
+
+.imagine-produs img {
+    width: 100%;
+    height: auto;
+}
+
+.pret-produs {
+    color: red;
+}
+
+.AdaugaCos {
+    cursor: pointer;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.footer strong {
+    color: blue;
+}
+
+.footer a {
+    color: blue;
+    text-decoration: none;
+}
+
+.footer button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.fixedHeight {
+    height: 100px;
+    width: 100px;
+    overflow: auto;
+}
+
+.carousel{
+    margin: auto;
+    margin-top: 5%;
+    width: 80%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    color: black;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.carousel-control-prev-icon::before {
+    content: "\f104";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.carousel-control-next-icon::before {
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.info{
+    margin-top: 50px;
+    margin-left: 15%;
+}
+
+.info img{
+    height: 200px;
+}
+
+.footer {
+    background-color:  #100c34;
+    margin: auto;
+    padding: 20px;
+    font-size: 14px;
+    height: 275px;
+    color: #dddddd;
+    width: 100%;
+    align-items:  center;
+}
+
+.footer strong {
+    color:  white;
+}
+
+.footer a {
+    color:  white;
+    text-decoration: none;
+}
+
+.footer button {
+    background-color: white;
+    color:  #100c34;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.buttoncontainer {
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    gap: 5px;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    padding-top: 20px;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: 2px solid #6c757d;
+    background-color: transparent;
+    color: #6c757d;
+    font-size: 16px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.btn:hover {
+    box-shadow: -4px 4px 8px rgba(255, 255, 0, 0.6),
+    4px 4px 8px rgba(255, 0, 0, 0.6);
+}
+
+
+.image-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.PromotionContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    gap: 25px;
+    margin-top: 55px;
+    position: relative;
+}
+
+.PromotionContainer img {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.PromotionContainer img:hover {
+    box-shadow: -4px 4px 8px rgba(255, 255, 0, 0.6),
+    4px 4px 8px rgba(255, 0, 0, 0.6);
+}
+
+.PromotionHeader {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    font-weight: bold;
+    margin-left: 5%;
+    margin-top: 5%;
+    font-size: 55px;
+
+}
+
+.Newsletter {
+    width: 80%;
+    background-color: #b8deff;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.Newsletter img{
+    float: right;
+    margin-top: -45%;
+}
+
+.category-page {
+    top: 40%;
+    display: flex;
+    width: 80%;
+    margin: 40px auto;
+    gap: 20px;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 400px;
+}
+
+.category-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #e41d34;
+    padding-bottom: 10px;
+}
+
+.category-content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.header-top .logo img {
+    height: 50px;
+}
+
+.header-top .search {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.header-top .icons {
+    display: flex;
+    gap: 20px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #2c3e50;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+main {
+    padding: 30px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.adminHeaderText{
+
+    color: white;
+
+}
