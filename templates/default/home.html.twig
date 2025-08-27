@@ -1,0 +1,116 @@
+{# templates/pages/home.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ca1ccc1537.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ asset('default/public/css/style.css') }}" />
+</head>
+<body>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="{{ asset('images/carousel5.png') }}" alt="First slide" />
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="{{ asset('images/carousel2.webp') }}" alt="Second slide" />
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="{{ asset('images/carousel3.png') }}" alt="Third slide" />
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="{{ asset('images/carousel4.png') }}" alt="Fourth slide" />
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="{{ asset('images/carousel1.webp') }}" alt="Fifth slide" />
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div class="row info">
+    <div><img src="{{ asset('images/transport_pana_la_usa.png') }}" class="img-fluid" alt="Transport"></div>
+    <div><img src="{{ asset('images/retur.png') }}" class="img-fluid" alt="Return"></div>
+    <div><img src="{{ asset('images/solutii_de_finantare.png') }}" class="img-fluid" alt="Financing"></div>
+    <div><img src="{{ asset('images/protejare_investitie.png') }}" class="img-fluid" alt="Protection"></div>
+</div>
+
+<div class="buttoncontainer">
+    <div class="content">
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group" role="group" aria-label="First group">
+                <button type="button" class="btn btn-outline-secondary">Smartwatch</button>
+                <button type="button" class="btn btn-outline-secondary">Dezumidificatoare</button>
+                <button type="button" class="btn btn-outline-secondary">Frieteuze</button>
+                <button type="button" class="btn btn-outline-secondary">Laptopuri</button>
+                <button type="button" class="btn btn-outline-secondary">Perie Rotativa</button>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <img src="{{ asset('images/smartwatch1.png') }}" alt="ceas 1" />
+            <img src="{{ asset('images/smartwatch2.png') }}" alt="ceas 2" />
+            <img src="{{ asset('images/smartwatch3.png') }}" alt="ceas 3" />
+            <img src="{{ asset('images/smartwatch4.png') }}" alt="ceas 4" />
+            <img src="{{ asset('images/smartwatch5.png') }}" alt="ceas 5" />
+        </div>
+    </div>
+</div>
+
+<div class="PromotionContainer img">
+    <h3 class="PromotionHeader">Promotii</h3>
+    <img src="{{ asset('images/promotie1.png') }}" alt="Promo 1" />
+    <img src="{{ asset('images/promotie2.png') }}" alt="Promo 2" />
+    <img src="{{ asset('images/promotie3.png') }}" alt="Promo 3" />
+    <img src="{{ asset('images/promotie4.png') }}" alt="Promo 4" />
+    <img src="{{ asset('images/promotie5.png') }}" alt="Promo 5" />
+</div>
+
+<div class="PromotionContainer">
+    <img src="{{ asset('images/promotie6.png') }}" alt="Promo 6" />
+    <img src="{{ asset('images/promotie7.png') }}" alt="Promo 7" />
+    <img src="{{ asset('images/promotie8.png') }}" alt="Promo 8" />
+    <img src="{{ asset('images/promotie9.png') }}" alt="Promo 9" />
+    <img src="{{ asset('images/promotie10.png') }}" alt="Promo 10" />
+</div>
+
+<div class="col-lg-9 col-sm-9 col-md-12 Newsletter">
+    <h3>Abonează-te la newsletter MediaGalaxy și află de reducerile cu timp limitat!</h3>
+    <p>Prin abonarea la newsletter-ul Media Galaxy confirm că am peste 16 ani.</p>
+    <p><i class="fa-regular fa-star"></i> Primesti ofertele la cel mai mic pret</p>
+    <p><i class="fa-regular fa-star"></i> Afli primul startul promotiilor si cand se lanseaza produse noi</p>
+    <p><i class="fa-regular fa-star"></i> Beneficiezi de ofertele si serviciile dedicate abonatilor</p>
+</div>
+
+</body>
+</html>
+
+{% endblock %}
