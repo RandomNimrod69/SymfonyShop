@@ -5,7 +5,13 @@
     <title>{% block title %}Welcome!{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    {# Global CSS, loaded once #}
+    {# Bootstrap CSS first #}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    {# Font Awesome CSS #}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    {# Global CSS, loaded after Bootstrap so it can override #}
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
     {# Optional page-specific CSS #}
@@ -19,11 +25,15 @@
 {# Page-specific content #}
 {% block body %}{% endblock %}
 
-{# Global JS #}
-<script src="{{ asset('js/script.js') }}"></script>
+{# Optional page-specific JS (after DOM loads) #}
+{% block javascripts %}
+    <script src="{{ asset('js/script.js') }}"></script>
+    <script src="{{ asset('js/carousel.js') }}"></script>
+{% endblock %}
 
-{# Optional page-specific JS #}
-{% block javascripts %}{% endblock %}
+{# jQuery and Bootstrap JS #}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
