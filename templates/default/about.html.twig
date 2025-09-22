@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Despre Noi{% endblock %}
+
+{% block body %}
+    <div class="container about-header">
+        <h1>Despre Noi</h1>
+        <p>Schimbam viitorul Shopping-ului Online ✨</p>
+    </div>
+
+    <div class="container">
+        <div class="about-section">
+            <h2>Misiunea Noastra</h2>
+            <p>
+                At <strong>SymfonyShop</strong>, Golul nostru este de a oferi o experienta excelenta de shopping.
+                From carefully curated products to a seamless online journey,
+                noi credem in uzul celor mai noi tehnologii si intr-un mindset care pune clientul inainte.
+            </p>
+        </div>
+
+        <div class="about-section">
+            <h2>Valorile Noastre</h2>
+            <p>
+                ✦ Transparenta – Credem in comunicatie clara cu clientii nostrii.<br>
+                ✦ Inovatie – Exploram constant noi modalitati de a imbunatati experienta de shopping.<br>
+                ✦ Comunitate – Cream relatii bune intre noi, clienti cat si Vanzatori.<br>
+                ✦ Sustenabilitate – Suportam Practici Eco-Friendly pentru un viitor mai curat.
+            </p>
+        </div>
+
+        <div class="text-center mb-5">
+            <a href="{{ path('contact') }}" class="btn-glow">Contacteaza-ne!</a>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Products{% endblock %}
+
+{% block body %}
+    <div class="container" style="margin-top: 200px;">
+        <h1 class="text-center text-white mb-5">
+            "{{ category.name }}"
+        </h1>
+
+        <div class="row product-grid">
+            {% if products is not empty %}
+                {% for product in products %}
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                {# Product image or placeholder #}
+                                {% if product.image is defined and product.image %}
+                                    <img src="{{ product.image }}" class="img-fluid mb-3" alt="{{ product.name }}">
+                                {% else %}
+                                    <img src="{{ asset('images/placeholder.webp') }}" class="img-fluid mb-3" alt="No image available">
+                                {% endif %}
+
+                                <h5>{{ product.name }}</h5>
+                                <p>Price: {{ product.price }} RON</p>
+
+                                <a href="#" class="btn btn-primary mt-3">Vezi Produsul</a>
+                                <a href="#" class="btn btn-primary mt-3">Adauga in Cos</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p class="text-white text-center">Nu s-au gasit produse in categorie.</p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

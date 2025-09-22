@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="container contact-header">
+        <h1>Contacteaza-ne</h1>
+        <p>Ai intrebari sau doresti sa lucrezi cu noi? Contacteaza-ne!</p>
+
+        <div class="contact-section">
+            <div>
+                <h2>Vrei sa ne contactezi?</h2>
+                <form class="contact-form" method="POST" action="#">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit">Lasa un mesaj</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <h3>Informatii Contact</h3>
+                <p><strong>Email:</strong> <a href="mailto:info@example.com">info@GaymersMarket.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+1234567890">+07 noi do si ale tale buze moi</a></p>
+                <p><strong>Address:</strong> Strada Otelului nr. 69 Baicoi Romania</p>
+                <p><strong>Follow us:</strong> <a href="#">Facebook</a>, <a href="#">Twitter</a>, <a href="#">Instagram</a></p>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15949.645508922136!2d25.864806775377602!3d45.03455448503269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b252e45ba462c7%3A0xdd732e92d04e7e5f!2s105200%20B%C4%83icoi%2C%20Romania!5e0!3m2!1sen!2sus!4v1756719707734!5m2!1sen!2sus"
+                    width="600"
+                    height="450"
+                    style="border:0;
+                    " allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+
+            </iframe>
+        </div>
+
+{% endblock %}

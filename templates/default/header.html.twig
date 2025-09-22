@@ -1,35 +1,58 @@
 <!DOCTYPE html>
 <html lang="em">
 
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Header Symfony</title>
+    <title>Header Symfony</title>
+
+    <!-- Normalize CSS (added before your custom styles) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!-- Your custom stylesheet -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}?v={{ random() }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-pI/VRnprUvSzL6d+4qfS6GQ3S7Hj4xGx/0vB8JQx2QcFhHhEr6lEbh1ewNw2VXjvPO6BfVZg7EDZ6A2Uq2Fzjw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
-
-
-
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-pI/VRnprUvSzL6d+4qfS6GQ3S7Hj4xGx/0vB8JQx2QcFhHhEr6lEbh1ewNw2VXjvPO6BfVZg7EDZ6A2Uq2Fzjw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
+<body>
+
 <header class="header">
     <div class="header-top">
-        <a href="index.php" class="logo">
+        <a href="{{ path('home') }}" class="logo">
             <img src="{{ asset('images/logo.png') }}" alt="Logo">
         </a>
 
-
-        <!-- Centered search bar -->
+        <!-- Bara Search -->
         <form class="search-form" action="search.html.twig" method="GET">
             <input type="text" name="q" placeholder="Search..." />
-            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
 
         <nav class="navbar-top">
-            <a href="login.html.twig">Login</a>
+            {% if app.user %}
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        {{ app.user.email }}
+                    </button>
+                    <div class="dropdown-content">
+                        {% if 'ROLE_ADMIN' in app.user.roles %}
+                            <a href="#">Admin Panel</a>
+                        {% endif %}
+                        <form id="logout-form" action="/logout" method="POST" style="display: inline;">
+                            <button type="submit" class="btn">Logout</button>
+                        </form>
+                    </div>
+                </div>
+                <a href="#" class="cart-btn">
+                    <i class="fas fa-shopping-cart"></i> Cart
+                </a>
+            {% else %}
+                <a href="{{ path('login') }}">Login</a>
+            {% endif %}
         </nav>
     </div>
 
@@ -39,34 +62,43 @@
                 <button class="dropbtn" id="produseBtn">
                     <i class="fa-solid fa-bars"></i> Produse
                 </button>
+
                 <div class="dropdown-content" id="produseMenu">
-                    <a href="service1.html.twig">Serviciu 1</a>
-                    <a href="service2.html.twig">Serviciu 2</a>
-                    <a href="service3.html.twig">Serviciu 3</a>
+                    {% if categories is defined and categories is not empty %}
+                        {% for cat in categories %}
+                            {% if cat.subcategories is defined and cat.subcategories is not empty %}
+                                <div class="dropdown-submenu">
+                                    <a href="javascript:void(0);">{{ cat.name }} <span class="caret">▸</span></a>
+                                    <div class="dropdown-content">
+                                        {% for subcat in cat.subcategories %}
+                                            <a href="{{ path('subcategory_show', {id: subcat.id}) }}">{{ subcat.name }}</a>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% else %}
+                                <a href="{{ path('category_show', {id: cat.id}) }}">{{ cat.name }}</a>
+                            {% endif %}
+                        {% endfor %}
+                    {% else %}
+                        <span>No categories available</span>
+                    {% endif %}
                 </div>
             </div>
 
-            <a href="contact.html.twig">Contact</a>
-            <a href="about.html.twig">Despre Noi</a>
-            <a href="contact.html.twig">Contact</a>
+            <a href="{{ path('about') }}">Despre Noi</a>
+            <a href="{{ path('contact') }}">Contact</a>
         </nav>
     </div>
 </header>
 
-
-<footer>
+<div class="stars-container">
     <div class="stars"></div>
     <div class="shooting-star"></div>
     <div class="shooting-star"></div>
     <div class="shooting-star"></div>
     <div class="shooting-star"></div>
     <div class="shooting-star"></div>
-    <div class="stars"></div>
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
+</div>
 
-</footer>
+</body>
 </html>
